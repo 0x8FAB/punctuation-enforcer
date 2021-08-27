@@ -1,4 +1,3 @@
-// "This is a test sentence. Or maybe two? Well, fuck it... let's try four"
 //
 //	Created:
 //		- 27 AUG 2021, 05:35 AM
@@ -52,7 +51,7 @@ const sentence_types  = ["question", "shout", "normal"]
 // 
 // But again, that's beyond the scope of this code. The edge cases are endless.
 //
-const question_markers = ["how", "what", "where", "is", "has"];
+const question_markers = ["how", "what", "where", "is", "has", "shall", "does"];
 
 //
 // These are the elements on which these functions act. If you use this code in a different
