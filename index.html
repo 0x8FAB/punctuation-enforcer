@@ -4,98 +4,10 @@
 		<meta charset="UTF-8">
 	</head>
 	<body>
-		<input type="text" id="textInput" placeholder="Enter some text" />
-		<p id="textPunctuated">The punctuated text will appear here.</p>
+		<input type="text" id="text_input_element" placeholder="Enter some text" />
+		<p id="text_output_element">The punctuated text will appear here.</p>
 		<button onclick="punctuate_input()">Punctuate</button>
 
-		<script>
-			//
-			// Sanitizes text; trims. Add to this more sanitizing operations if necessary.
-			//
-			function sanitize_text(text)
-			{
-				return text.trim();
-			}
-
-			//
-			// is_a_question determines if its input text might be a question
-			// based on the word with which it starts.
-			//
-			function is_a_question(text)
-			{
-				// Words that a question usually starts with.
-				let question_markers = ["how", "what", "is", "has", "would"];
-
-				// Text must be transformed into lower case so that we can check if
-				// it starts with a question marker word.
-				let lower_case = text.toLowerCase();
-
-				let is_question = false;
-				for (let i = 0; i < question_markers.length; i++)
-				{
-					if (lower_case.startsWith(question_markers[i]))
-					{
-						is_question = true;
-						break;
-					}
-				}
-				return is_question;
-			}
-
-			function get_end_marker(text, message_type = "normal")
-			{
-				let end_marker = '.'; // default case
-				switch (message_type)
-				{
-					case "shout":
-						end_marker = '!';
-						break;
-					case "question":
-						end_marker = '?';
-						break;
-				}
-				return end_marker;
-			}
-
-			function has_end_marker(text)
-			{
-				// Checks if the input text already has a punctuation marker
-				return ['.', '?', '!'].indexOf(text.slice(-1)) != -1;
-			}
-
-			function parse_sentences(text)
-			{
-				let num_punctuation = 0;
-
-				for (let i = 0; i < text.length; i++)
-				{
-					// A sentence is marked by punctuation.
-					if ()
-				}
-			}
-
-			function punctuate_input()
-			{
-				var text_input = document.getElementById("textInput");
-				var text_punctuated = document.getElementById("textPunctuated");
-
-				// Handle multiple sentences in one line
-				var sentences = parse_sentences(input_text);
-
-				var output_text = input_text.charAt(0).toUpperCase() + input_text.slice(1);
-				if (!has_end_marker(output_text))
-				{
-					let type = "normal"; // or shout
-					if (is_a_question(output_text))
-					{
-						type = "question";
-					}
-
-					output_text += get_end_marker(output_text, type);
-				}
-
-				text_punctuated.innerHTML = output_text;
-			}
-		</script>
+		<script src="main.js"></script>
 	</body>
 </html>
