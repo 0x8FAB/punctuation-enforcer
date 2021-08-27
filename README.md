@@ -10,7 +10,7 @@ other code, the main changes are:
 
 1. Remove the HTMLElement references:
 ```javascript
-const input_element	 = document.getElementById("text_input_element");
+const input_element  = document.getElementById("text_input_element");
 const output_element = document.getElementById("text_output_element");
 ```
 
