@@ -120,9 +120,6 @@ function extract_sentences(text)
 	// end_index keeps track of the end of the current sentence.
 	let end_index = text.length;
 
-	// current_sentence is a string composed of the substring [start_index, end_index).
-	let current_sentence = "";
-
 	// A sentence is extracted with every iteration.
 	let reached_end = false;
 	while ((!reached_end) && (start_index < text.length))
@@ -158,6 +155,10 @@ function extract_sentences(text)
 				end_index = i;
 			}
 		}
+
+		// sentence is a string composed of the substring [start_index, end_index). Sanitization 
+		// is performed right after its construction, so if you need more than just trim(), then
+		// make a new function to do all the sanitization and call it here.
 		let sentence = text.slice(start_index, end_index).trim();
 		sentences.push(sentence);
 
